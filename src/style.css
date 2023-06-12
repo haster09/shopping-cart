@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 20vw;
   background-color: black;
   color: white;
 }
@@ -12,7 +12,6 @@ body {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  padding: 0 10vw;
 }
 .title {
   font-size: 3vh;
@@ -41,14 +40,14 @@ body {
 #content {
   height: 78vh;
   padding: 0 4vw;
+  display: flex;
 }
 #footer {
   height: 6vh;
 }
 .carousel {
-  width: 72vw;
-  height: 40.5vw;
   display: flex;
+  align-self: flex-end;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -58,15 +57,20 @@ body {
 }
 .carousel-item {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 .carousel-img {
   width: 100%;
-  object-fit: contain;
+  border-radius: 20px;
 }
 .carouselButtons {
   position: absolute;
   display: flex;
-  gap: 80vw;
+  gap: 55vw;
+}
+.carouselPrevious, .carouselNext {
+  height: 3vh;
+  width: 3vh;
+  border-radius: 50%;
+  background-color: white;
 }

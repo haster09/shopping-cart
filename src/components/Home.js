@@ -3,6 +3,8 @@ import second from '../images/2.jpg';
 import third from '../images/3.jpg';
 import Item from './Item.js';
 import { useState } from 'react'; 
+import arrowPrevious from '../images/arrowPrevious.svg';
+import arrowNext from '../images/arrowNext.svg';
 
 const Home = () => {
 
@@ -13,7 +15,7 @@ const Home = () => {
       setActiveIndex(0);
     } 
     else {
-      setActiveIndex(activeIndex+1);
+      setActiveIndex((currentIndex) => currentIndex + 1);
     }
   }
 
@@ -22,7 +24,7 @@ const Home = () => {
       setActiveIndex(2);
     }
     else {
-      setActiveIndex(activeIndex-1);
+      setActiveIndex((currentIndex) => currentIndex - 1);
     }
   }
 
@@ -49,8 +51,8 @@ const Home = () => {
         return <Item item={item}/>
       })}</div>
       <div className='carouselButtons'>
-        <button className='carouselPrevious' onClick={previous}>prev</button>
-        <button className='carouselNext'onClick={next}>next</button>
+        <button className='carouselPrevious' onClick={previous}><img src={arrowPrevious} alt='arrowPrevious'/></button>
+        <button className='carouselNext'onClick={next}><img src={arrowNext} alt='arrowNext'/></button>
       </div>
     </div>
 
