@@ -1,0 +1,72 @@
+:root {
+  --main-font: 'Work Sans', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+#header {
+  height: 16vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 10vw;
+}
+.title {
+  font-size: 3vh;
+  font-family: var(--main-font);
+  letter-spacing: 0.2rem;
+}
+.navBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: end;
+  gap: 100px;
+  font-family: var(--main-font);
+  letter-spacing: 0.1rem;
+  align-items: center;
+  font-size: 2vh;
+}
+.icon {
+  width: 48px;
+}
+.title, .navItem {
+  cursor: pointer;
+}
+.navItem:hover {
+  transform: scale(1.1);
+}
+#content {
+  height: 78vh;
+  padding: 0 4vw;
+}
+#footer {
+  height: 6vh;
+}
+.carousel {
+  width: 72vw;
+  height: 40.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.images {
+  white-space: nowrap;
+}
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-img {
+  width: 100%;
+  object-fit: contain;
+}
+.carouselButtons {
+  position: absolute;
+  display: flex;
+  gap: 80vw;
+}
