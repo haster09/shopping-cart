@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.508f5ab5.css",
+    "main.js": "/shopping-cart/static/js/main.2f69fa6f.js",
+    "static/media/3.jpg": "/shopping-cart/static/media/3.d0f8667a8dccd551f46d.jpg",
+    "static/media/1.jpg": "/shopping-cart/static/media/1.5f7e5d355a236d721079.jpg",
+    "static/media/2.jpg": "/shopping-cart/static/media/2.ab711b59a10938434992.jpg",
+    "static/media/product02.webp": "/shopping-cart/static/media/product02.6dd7aa12bae9a7873a07.webp",
+    "static/media/product05.webp": "/shopping-cart/static/media/product05.7cd8ad2b42e8161e9d8e.webp",
+    "static/media/product01.webp": "/shopping-cart/static/media/product01.87adb89d0ca0cfa2dc1c.webp",
+    "static/media/product06.webp": "/shopping-cart/static/media/product06.ce0b1cf72753cef60071.webp",
+    "static/media/product04.webp": "/shopping-cart/static/media/product04.9eba884fd55f9341c58c.webp",
+    "static/media/product03.webp": "/shopping-cart/static/media/product03.67a8c2bca29917fdda60.webp",
+    "index.html": "/shopping-cart/index.html",
+    "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.46cb7d4b356f96f7ba56278ed3f0bcbd.svg",
+    "static/media/arrowNext.svg": "/shopping-cart/static/media/arrowNext.18aa13bdbb4c62eb48659be47329cfc5.svg",
+    "static/media/arrowPrevious.svg": "/shopping-cart/static/media/arrowPrevious.1c39f672774a9d39b5a6b682825df85f.svg",
+    "main.508f5ab5.css.map": "/shopping-cart/static/css/main.508f5ab5.css.map",
+    "main.2f69fa6f.js.map": "/shopping-cart/static/js/main.2f69fa6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.508f5ab5.css",
+    "static/js/main.2f69fa6f.js"
+  ]
+}
