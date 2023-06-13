@@ -1,4 +1,4 @@
-const Item = ({ item }) => {
+const CarouselItem = ({ item }) => {
 
   return (
     <div className='carousel-item'>
@@ -7,4 +7,4 @@ const Item = ({ item }) => {
   )
 }
 
-export default Item;
+export default CarouselItem;

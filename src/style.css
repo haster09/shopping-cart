@@ -1,17 +1,30 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 :root {
   --main-font: 'Work Sans', sans-serif;
 }
-body {
-  margin: 0;
-  padding: 0 20vw;
-  background-color: black;
-  color: white;
+body::-webkit-scrollbar {
+  display: none;
 }
-#header {
-  height: 16vh;
+body {
+  height: 100vh;
+  margin: 0;
+  color: white;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.header {
+  height: 14vh;
+  background-color: black;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  padding: 0 24vw;
+  position: sticky;
+  top: 0;
 }
 .title {
   font-size: 3vh;
@@ -31,46 +44,100 @@ body {
 .icon {
   width: 48px;
 }
+.navItem {
+  justify-self: flex-end;
+}
 .title, .navItem {
   cursor: pointer;
 }
 .navItem:hover {
   transform: scale(1.1);
 }
-#content {
-  height: 78vh;
-  padding: 0 4vw;
-  display: flex;
-}
-#footer {
-  height: 6vh;
-}
 .carousel {
-  display: flex;
-  align-self: flex-end;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin: 2vh 24vw;
 }
 .images {
   white-space: nowrap;
+  transition: transform 0.4s;
 }
 .carousel-item {
-  display: inline-flex;
+  display: inline;
   width: 100%;
 }
 .carousel-img {
   width: 100%;
   border-radius: 20px;
+  
 }
 .carouselButtons {
   position: absolute;
   display: flex;
-  gap: 55vw;
+  gap: 53vw;
 }
 .carouselPrevious, .carouselNext {
   height: 3vh;
   width: 3vh;
-  border-radius: 50%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  cursor: pointer;
+}
+.carouselPrevious:hover, .carouselNext:hover {
+  transform: scale(1.2);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#catalog {
+  color: black;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  height: 100vh;
+  width: 66vw;
+  font-family: var(--main-font);
+  box-shadow: -2px 0px 15px 0px black, 2px 0px 15px 0px black;
+}
+.catalogNav {
+  background-color: rgb(4,4,4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+.catalogNavTitle {
+  font-size: 2.1rem;
+  letter-spacing: 3px;
+  color: white;
+  position: fixed;
+}
+.catalogContent {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+}
+.product {
+  cursor: pointer;
+  border: 1px solid rgb(239, 239, 239);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product:hover {
+  transform: scale(1.1);
+}
+.productImage {
+  width: 100%;
+}
+.productPrice {
+  font-size: 24px;
+}
+.productName {
+  font-size: 18px;
 }

@@ -1,12 +1,12 @@
 import first from '../images/1.jpg';
 import second from '../images/2.jpg';
 import third from '../images/3.jpg';
-import Item from './Item.js';
-import { useState } from 'react'; 
+import CarouselItem from './CarouselItem.js';
 import arrowPrevious from '../images/arrowPrevious.svg';
 import arrowNext from '../images/arrowNext.svg';
+import { useState } from 'react'; 
 
-const Home = () => {
+const Carousel = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -42,21 +42,22 @@ const Home = () => {
       image: third
     }
   ]
-
+  
+  let i = 0;
+ 
   return (
     <div className='carousel'>
       <div className='images'
       style={{ transform:  `translate(-${activeIndex * 100}%)`}}>
         {items.map((item) => {
-        return <Item item={item}/>
+        return <CarouselItem key={i++} item={item}/>
       })}</div>
       <div className='carouselButtons'>
         <button className='carouselPrevious' onClick={previous}><img src={arrowPrevious} alt='arrowPrevious'/></button>
         <button className='carouselNext'onClick={next}><img src={arrowNext} alt='arrowNext'/></button>
       </div>
     </div>
-
   );
 }
 
-export default Home;
+export default Carousel;
