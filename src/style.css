@@ -27,7 +27,7 @@ body {
   top: 0;
 }
 .title {
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-family: var(--main-font);
   letter-spacing: 0.2rem;
 }
@@ -42,7 +42,7 @@ body {
   font-size: 2vh;
 }
 .icon {
-  width: 48px;
+  width: 38px;
 }
 .navItem {
   justify-self: flex-end;
@@ -51,7 +51,7 @@ body {
   cursor: pointer;
 }
 .navItem:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 .carousel {
   display: inline-flex;
@@ -99,19 +99,18 @@ a {
   height: 100vh;
   width: 66vw;
   font-family: var(--main-font);
-  box-shadow: -2px 0px 15px 0px black, 2px 0px 15px 0px black;
+  box-shadow: -1px 0px 10px 5px black, 1px 0px 10px 5px black;
 }
 .catalogNav {
-  background-color: rgb(4,4,4);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+  box-shadow: 0px 0px 0px 0px black, 1px 0px 5px 0px black;
 }
 .catalogNavTitle {
   font-size: 2.1rem;
   letter-spacing: 3px;
-  color: white;
   position: fixed;
 }
 .catalogContent {
@@ -123,14 +122,13 @@ a {
 }
 .product {
   cursor: pointer;
-  border: 1px solid rgb(239, 239, 239);
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 .product:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .productImage {
   width: 100%;
