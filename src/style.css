@@ -9,15 +9,15 @@
 body::-webkit-scrollbar {
   display: none;
 }
-body {
-  height: 100vh;
+html, body {
+  height: 100%;
   margin: 0;
   color: white;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 .header {
-  height: 14vh;
+  height: 150px;
   background-color: black;
   display: grid;
   align-items: center;
@@ -96,10 +96,9 @@ a {
   color: black;
   display: grid;
   grid-template-columns: 2fr 5fr;
-  height: 100vh;
+  min-height: calc(100vh - 150px);
   width: 66vw;
   font-family: var(--main-font);
-  box-shadow: -1px 0px 10px 5px black, 1px 0px 10px 5px black;
 }
 .catalogNav {
   display: flex;
@@ -107,13 +106,17 @@ a {
   align-items: center;
   padding-top: 50px;
   box-shadow: 0px 0px 0px 0px black, 1px 0px 5px 0px black;
+  background-color: rgb(36, 36, 36);
+  color: white;
 }
 .catalogNavTitle {
   font-size: 2.1rem;
   letter-spacing: 3px;
   position: fixed;
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
 }
-.catalogContent {
+.catalogMain {
   display: grid;
   padding: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -125,17 +128,33 @@ a {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 8px;
+  height: 300px;
+  border: 2px solid transparent
 }
 .product:hover {
-  transform: scale(1.05);
+  border: 2px solid rgb(200, 200, 200);
 }
 .productImage {
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 .productPrice {
   font-size: 24px;
 }
 .productName {
-  font-size: 18px;
+  font-size: 20px;
+}
+.productPreviousPrice {
+  text-decoration: line-through;
+}
+.catalogNavLink {
+  position: fixed;
+  top: 270px;
+  font-size: 1.5rem;
+}
+.cpu {
+  color: black;
+  font-size: 22px;
 }

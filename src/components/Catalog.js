@@ -1,16 +1,14 @@
-import products from './products';
-import CatalogItem from './CatalogItem';
+import CatalogNav from './CatalogNav';
+import { Outlet } from 'react-router-dom';
 
 const Catalog = () => {
 
   return (
     <div id='catalog'>
-      <div className='catalogNav'>
-        <div className='catalogNavTitle'>PARTS</div>
+      <CatalogNav />
+      <div className='catalogMain'>
+        <Outlet/>
       </div>
-      <div className='catalogContent'>{products.map((product) => {
-        return <CatalogItem product={product}/>
-      })}</div>
     </div>
   );
 }
