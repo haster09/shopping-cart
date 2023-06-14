@@ -2,8 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Catalog from './Catalog';
 import Header from './Header';
 import Carousel from './Carousel';
-import CatalogMain from './CatalogMain';
-import CatalogCPU from './CatalogCPU';
+import CatalogItem from './CatalogItem';
 
 const App = () => {
 
@@ -13,8 +12,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Carousel />} />
         <Route path='/catalog' element={<Catalog />} >
-          <Route path='/catalog' index element={<CatalogMain />} />
-          <Route path='/catalog/cpu' element={<CatalogCPU />} />
+          <Route path='/catalog' index element={<CatalogItem type=""/>} />
+          <Route path='/catalog/cpu' element={<CatalogItem type='cpu'/>} />
+          <Route path='/catalog/gpu' element={<CatalogItem type='gpu'/>} />
+          <Route path='/catalog/mobo' element={<CatalogItem type='mobo'/>} />
+          <Route path='/catalog/ssd' element={<CatalogItem type='ssd'/>} />
         </Route>
       </Routes>
     </>

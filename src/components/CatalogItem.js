@@ -1,12 +1,23 @@
-const CatalogItem = ({product}) => {
+import products from './products.js'
+import CatalogItemTemplate from './CatalogItemTemplate';
+
+const CatalogItem = ({type}) => {
+
+  let i = 0;
 
   return (
-    <div className='product'>
-      <img src={product.image} className='productImage' alt={product.name}/>
-      <div className='productName'>{product.name}</div>
-      <div className='productPreviousPrice'>{product.previousPrice}</div>
-      <div className='productPrice'>{product.price}</div>
-    </div>
+  <>
+    {products.map((product) => {
+      if (type === '') {
+        return <CatalogItemTemplate key={i++} product={product}/>
+      }
+      else if (product.type === type) {
+        return <CatalogItemTemplate key={i++} product={product}/>
+      }
+      return false;
+    }
+    )}
+  </>
   )
 }
 

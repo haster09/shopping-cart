@@ -90,7 +90,7 @@ const products = [
   {
     id: 10,
     name: 'Intel Core i3 12100F',
-    type: 'gpu',
+    type: 'cpu',
     price: '89.99$',
     image: product10,
     discount: true,

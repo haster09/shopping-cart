@@ -112,9 +112,9 @@ a {
 .catalogNavTitle {
   font-size: 2.1rem;
   letter-spacing: 3px;
-  position: fixed;
   text-decoration: underline 1px;
   text-underline-offset: 5px;
+  position: fixed;
 }
 .catalogMain {
   display: grid;
@@ -150,11 +150,25 @@ a {
   text-decoration: line-through;
 }
 .catalogNavLink {
-  position: fixed;
-  top: 270px;
   font-size: 1.5rem;
 }
 .cpu {
   color: black;
   font-size: 22px;
+}
+.cpuLink {
+  position: fixed;
+  top: 270px;
+}
+.gpuLink {
+  position: fixed;
+  top: 310px;
+}
+.moboLink {
+  position: fixed;
+  top: 350px;
+}
+.ssdLink {
+  position: fixed;
+  top: 390px;
 }
