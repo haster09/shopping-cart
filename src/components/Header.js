@@ -4,7 +4,11 @@ import cart_svg from '../images/shopping-cart.svg'
 const Header = () => {
 
   const openCart = () => {
-    document.querySelector('.cartDiv').classList.remove('none'); 
+    document.querySelector('.cartDiv').classList.remove('none');
+    const carousel = document.querySelector('.carousel');
+    if (carousel !== null) {
+      carousel.style.filter = 'blur(10px)';
+    }
   }
 
   return (
