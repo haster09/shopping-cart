@@ -3,12 +3,14 @@ import Catalog from './Catalog';
 import Header from './Header';
 import Home from './Home';
 import CatalogItem from './CatalogItem';
+import Cart from './Cart';
 
 const App = () => {
 
   return (
     <>
       <Header />
+      <Cart />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} >
