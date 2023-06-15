@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Catalog from './Catalog';
 import Header from './Header';
-import Carousel from './Carousel';
+import Home from './Home';
 import CatalogItem from './CatalogItem';
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Carousel />} />
+        <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} >
           <Route path='/catalog' index element={<CatalogItem type=""/>} />
           <Route path='/catalog/cpu' element={<CatalogItem type='cpu'/>} />

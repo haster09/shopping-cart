@@ -1,13 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react';
 
 const CatalogNav = () => {
+
   return (
   <div className='catalogNav'>
-    <Link className='catalogNavTitle' to ='/catalog'>PARTS</Link>
-    <Link className='catalogNavLink cpuLink' to='/catalog/cpu'>CPU</Link>
-    <Link className='catalogNavLink gpuLink' to='/catalog/gpu'>GPU</Link>
-    <Link className='catalogNavLink moboLink' to='/catalog/mobo'>MOBO</Link>
-    <Link className='catalogNavLink ssdLink' to='/catalog/ssd'>SSD</Link>
+    <NavLink className='catalogNavTitle' to='/catalog'>PARTS</NavLink>
+    <NavLink id='cpuLink' to='/catalog/cpu'
+    className={({ isActive }) => (isActive ? "link-active" : "catalogNavLink")} >CPU</NavLink>
+    <NavLink id='gpuLink' to='/catalog/gpu'
+    className={({ isActive }) => (isActive ? "link-active" : "catalogNavLink")}>GPU</NavLink>
+    <NavLink id='moboLink' to='/catalog/mobo'
+    className={({ isActive }) => (isActive ? "link-active" : "catalogNavLink")} >MOBO</NavLink>
+    <NavLink id='ssdLink' to='/catalog/ssd'
+    className={({ isActive }) => (isActive ? "link-active" : "catalogNavLink")} >SSD</NavLink>
   </div>
   )
 }
