@@ -8,15 +8,15 @@ const Header = () => {
   }
 
   return (
-    <>
-      <div className='header' >
+    <div className='headerOuter'>
+      <div className='headerInner' >
         <div className='title'><Link to='/'>COMPUTER HARDWARE</Link></div>
           <div className='navBar'>
             <div className='navItem'><Link to='/catalog'>CATALOG</Link></div>
             <div onClick={openCart} className='navItem'><img className='icon' src={cart_svg} alt='shopping-cart'/></div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
