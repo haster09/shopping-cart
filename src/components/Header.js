@@ -5,10 +5,10 @@ const Header = () => {
 
   const openCart = () => {
     document.querySelector('.cartDiv').classList.remove('none');
-    const carousel = document.querySelector('.carousel');
-    if (carousel !== null) {
-      carousel.style.filter = 'blur(10px)';
-    }
+    setTimeout(() => {
+      document.querySelector('.cart').style.transform =  'translate(-35vw)';
+    }, 200);
+    document.body.style.overflow = 'hidden';
   }
 
   return (

@@ -1,5 +1,5 @@
-import first from '../images/1.jpg';
-import second from '../images/2.jpg';
+import first from '../images/1.webp';
+import second from '../images/2.webp';
 import third from '../images/3.jpg';
 import CarouselItem from './CarouselItem.js';
 import arrowPrevious from '../images/arrowPrevious.svg';
@@ -44,14 +44,18 @@ const Carousel = () => {
   ]
   
   let i = 0;
+
  
   return (
     <div className='carousel'>
       <div className='images'
       style={{ transform:  `translate(-${activeIndex * 100}%)`}}>
-        {items.map((item) => {
+        {
+        items.map((item) => {
         return <CarouselItem key={i++} item={item}/>
-      })}</div>
+        })
+      }
+      </div>
       <div className='carouselButtons'>
         <button className='carouselPrevious' onClick={previous}><img src={arrowPrevious} alt='arrowPrevious'/></button>
         <button className='carouselNext'onClick={next}><img src={arrowNext} alt='arrowNext'/></button>

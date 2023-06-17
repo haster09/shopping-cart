@@ -4,7 +4,7 @@ import AdHome from './AdHome';
 
 const Home = () => {
   return (
-    <div id='home'>
+    <div className='home'>
       <Carousel />
       <Sale />
       <AdHome />

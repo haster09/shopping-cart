@@ -1,5 +1,6 @@
 import ad from '../images/adhome.webp'
 
+
 const AdHome = () => {
   return (
     <div className='adHome'>

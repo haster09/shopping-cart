@@ -10,7 +10,6 @@ const App = () => {
   return (
     <>
       <Header />
-      <Cart />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} >
@@ -21,6 +20,7 @@ const App = () => {
           <Route path='/catalog/ssd' element={<CatalogItem type='ssd'/>} />
         </Route>
       </Routes>
+      <Cart />
     </>
   )
 }
