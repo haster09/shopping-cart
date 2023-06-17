@@ -4,9 +4,9 @@ import cart_svg from '../images/shopping-cart.svg'
 const Header = () => {
 
   const openCart = () => {
-    document.querySelector('.cartDiv').classList.remove('none');
     setTimeout(() => {
       document.querySelector('.cart').style.transform =  'translate(-35vw)';
+      document.querySelector('.cartBg').style.transform = 'translate(100vw)';
     }, 200);
     document.body.style.overflow = 'hidden';
   }

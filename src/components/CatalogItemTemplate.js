@@ -1,3 +1,5 @@
+import addIcon from '../images/add-shopping-cart.svg'
+
 const CatalogItemTemplate = ({product}) => {
 
   return (
@@ -6,6 +8,7 @@ const CatalogItemTemplate = ({product}) => {
       <div className='productName'>{product.name}</div>
       <div className='productPreviousPrice'>{product.previousPrice ? `${product.previousPrice}$` : null}</div>
       <div className='productPrice'>{`${product.price}$`}</div>
+      <div className='productBuy'><img className='productAddIcon' src={addIcon} alt='buy-item'/></div>
     </div>
   )
 }
