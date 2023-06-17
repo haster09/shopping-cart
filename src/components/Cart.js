@@ -18,8 +18,8 @@ const Cart = () => {
           <button onClick={cartClose} type='button' className='cartClose'>x</button>
           <div className='cartTitle'>cart</div>
         </div>
-        <div className='cartItems'>{cartItems ? <div>CART IS EMPTY</div> : cartItems.map((item) => {
-          return;
+        <div className='cartItems'>{cartItems ? <div className='cartEmpty'>CART IS EMPTY :(</div> : cartItems.map((item) => {
+          return null;
         })}</div>
       </div>
     </>
