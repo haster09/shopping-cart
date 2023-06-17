@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.5d8c87e3.css",
-    "main.js": "/shopping-cart/static/js/main.7c0308ea.js",
-    "static/media/3.jpg": "/shopping-cart/static/media/3.d0f8667a8dccd551f46d.jpg",
+    "main.css": "/shopping-cart/static/css/main.f9f69971.css",
+    "main.js": "/shopping-cart/static/js/main.68241e45.js",
+    "static/media/3.jpg": "/shopping-cart/static/media/3.44173b56eb49cf948437.jpg",
     "static/media/adhome.webp": "/shopping-cart/static/media/adhome.f6d850851bc486129443.webp",
-    "static/media/1.jpg": "/shopping-cart/static/media/1.5f7e5d355a236d721079.jpg",
-    "static/media/2.jpg": "/shopping-cart/static/media/2.ab711b59a10938434992.jpg",
     "static/media/product02.webp": "/shopping-cart/static/media/product02.7a89c7889f1ca85845aa.webp",
+    "static/media/1.webp": "/shopping-cart/static/media/1.ea9d76e388b29e0c2625.webp",
+    "static/media/2.webp": "/shopping-cart/static/media/2.5c62752cda45aa74e320.webp",
     "static/media/product04.webp": "/shopping-cart/static/media/product04.f3d57813d820829a8daa.webp",
     "static/media/product08.webp": "/shopping-cart/static/media/product08.edf5a3546bdbe2f68d77.webp",
     "static/media/product11.webp": "/shopping-cart/static/media/product11.6469a67446abb258b272.webp",
@@ -22,11 +22,11 @@
     "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.46cb7d4b356f96f7ba56278ed3f0bcbd.svg",
     "static/media/arrowNext.svg": "/shopping-cart/static/media/arrowNext.18aa13bdbb4c62eb48659be47329cfc5.svg",
     "static/media/arrowPrevious.svg": "/shopping-cart/static/media/arrowPrevious.1c39f672774a9d39b5a6b682825df85f.svg",
-    "main.5d8c87e3.css.map": "/shopping-cart/static/css/main.5d8c87e3.css.map",
-    "main.7c0308ea.js.map": "/shopping-cart/static/js/main.7c0308ea.js.map"
+    "main.f9f69971.css.map": "/shopping-cart/static/css/main.f9f69971.css.map",
+    "main.68241e45.js.map": "/shopping-cart/static/js/main.68241e45.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d8c87e3.css",
-    "static/js/main.7c0308ea.js"
+    "static/css/main.f9f69971.css",
+    "static/js/main.68241e45.js"
   ]
 }
