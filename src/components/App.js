@@ -4,8 +4,15 @@ import Header from './Header';
 import Home from './Home';
 import CatalogItem from './CatalogItem';
 import Cart from './Cart';
+import { useState } from 'react';
 
 const App = () => {
+
+  const [ cartItems, setCartItems ] = useState([]);
+
+  const collect = (data) => {
+    setCartItems(cartItems.concat(data));
+  }
 
   return (
     <>
@@ -13,14 +20,14 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} >
-          <Route path='/catalog' index element={<CatalogItem type=""/>} />
-          <Route path='/catalog/cpu' element={<CatalogItem type='cpu'/>} />
-          <Route path='/catalog/gpu' element={<CatalogItem type='gpu'/>} />
-          <Route path='/catalog/mobo' element={<CatalogItem type='mobo'/>} />
-          <Route path='/catalog/ssd' element={<CatalogItem type='ssd'/>} />
+          <Route path='/catalog' index element={<CatalogItem type="" collect={collect}/>} />
+          <Route path='/catalog/cpu' element={<CatalogItem type='cpu' collect={collect}/>} />
+          <Route path='/catalog/gpu' element={<CatalogItem type='gpu' collect={collect}/>} />
+          <Route path='/catalog/mobo' element={<CatalogItem type='mobo' collect={collect}/>} />
+          <Route path='/catalog/ssd' element={<CatalogItem type='ssd' collect={collect}/>} />
         </Route>
       </Routes>
-      <Cart />
+      <Cart items={cartItems}/>
     </>
   )
 }
