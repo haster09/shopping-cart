@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import cart_svg from '../images/shopping-cart.svg';
+import { useEffect } from 'react';
 
 export const openCart = () => {
   setTimeout(() => {
@@ -10,7 +11,16 @@ export const openCart = () => {
   document.querySelector('.cartDiv').style.overflowY = 'scroll';
 }
 
-const Header = () => {
+const Header = ({count}) => {
+
+  useEffect(() => {
+    if (count === 0) {
+      document.querySelector('.itemsCounter').classList.add('none');
+    }
+    else {
+      document.querySelector('.itemsCounter').classList.remove('none');
+    }
+  })
 
   return (
     <>
@@ -18,7 +28,7 @@ const Header = () => {
         <div className='title'><Link to='/'>COMPUTER HARDWARE</Link></div>
           <div className='navBar'>
             <div className='navItem'><Link to='/catalog'>CATALOG</Link></div>
-            <div onClick={openCart} className='navItem'><img className='icon' src={cart_svg} alt='shopping-cart'/></div>
+            <div onClick={openCart} className='navItem'><img className='icon' src={cart_svg} alt='shopping-cart'/><div className='itemsCounter none'>{count}</div></div>
         </div>
       </div>
     </>

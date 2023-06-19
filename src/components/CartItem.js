@@ -12,7 +12,7 @@ const CartItem = ({item, remove, add}) => {
         <span className='cartItemNumber'>{item.count}</span>
         <button onClick={add} className='cartItemButton'><img src={plus} alt='plus'/></button>
       </div>
-      <div className='cartItemPrice'>{`${item.price}$`}</div>
+      <div className='cartItemPrice'>{`${(item.price * item.count).toFixed(2)}$`}</div>
     </div>
   )
 }

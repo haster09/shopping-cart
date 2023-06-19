@@ -1,44 +1,15 @@
 import CartItem from './CartItem';
-import { useState, useEffect } from 'react';
 
-const Cart = ({items}) => {
+const Cart = ({items, add, remove, sum, checkout}) => {
 
   const cartClose = () => {
     setTimeout(() => {
       document.querySelector('.cart').style.transform =  'translate(35vw)';
       document.querySelector('.cartBg').style.transform = 'translate(-100vw)';
     }, 200);
+    document.body.style.overflow = 'scroll';
+    document.querySelector('.cartDiv').style.overflowY = 'hidden';
   }
-
-  const [ cartItems, setCartItems ] = useState([])
-
-  const add = (e) => {
-    for (let item of cartItems) {
-      if (item.name.toString() === e.target.parentNode.parentNode.parentNode.id) {
-        item.count += 1;
-      }
-    }
-    setCartItems(cartItems.concat())
-  }
-
-  const remove = (e) => {
-    for (let item of cartItems) {
-      if (item.name.toString() === e.target.parentNode.parentNode.parentNode.id) {
-        if (item.count === 1) {
-          setCartItems(cartItems.splice(cartItems.indexOf(item), 1))
-          console.log()
-        }
-        else {
-          item.count -= 1;
-        }
-      }
-    }
-    setCartItems(cartItems.concat())
-  }
-
-  useEffect(() => {
-    setCartItems(items)
-  },[items])
 
   let i = 0;
 
@@ -51,11 +22,15 @@ const Cart = ({items}) => {
           <div className='cartTitle'>cart</div>
         </div>
         <div className='cartItems'>{
-          cartItems.length === 0 ? 
+          items.length === 0 ? 
           <div className='cartEmpty'>CART IS EMPTY :(</div> : 
-          cartItems.map((item) => {
-            return <CartItem key={i++} remove={remove} add={add} item={item}/>;
+          items.map((item) => {
+            return <CartItem key={i++} add={add} remove={remove} item={item}/>;
         })}</div>
+        <div className='footer'>
+          <div className='sum'>{`Total: `}<span className='sumText'>{`${sum().toFixed(2)}$`}</span></div>
+          <button onClick={checkout} className='checkout'>CHECKOUT</button>
+        </div>
       </div>
     </div>
   )
