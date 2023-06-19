@@ -1,4 +1,5 @@
 import addIcon from '../images/add-shopping-cart.svg'
+import { openCart } from './Header';
 
 const CatalogItemTemplate = ({product, getData}) => {
 
@@ -7,7 +8,9 @@ const CatalogItemTemplate = ({product, getData}) => {
       image: product.image,
       name: product.name,
       price: product.price,
+      count: 1,
     })
+    openCart();
   }
 
   return (

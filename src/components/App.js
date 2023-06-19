@@ -11,7 +11,14 @@ const App = () => {
   const [ cartItems, setCartItems ] = useState([]);
 
   const collect = (data) => {
-    setCartItems(cartItems.concat(data));
+    for (let item of cartItems) {
+      if (item.name === data.name) {
+        item.count += 1;
+        setCartItems(cartItems.concat())
+        return;
+      }
+    }
+    setCartItems(cartItems.concat(data))  
   }
 
   return (

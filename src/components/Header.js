@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
-import cart_svg from '../images/shopping-cart.svg'
+import cart_svg from '../images/shopping-cart.svg';
+
+export const openCart = () => {
+  setTimeout(() => {
+    document.querySelector('.cart').style.transform =  'translate(-35vw)';
+    document.querySelector('.cartBg').style.transform = 'translate(100vw)';
+  }, 200);
+  document.body.style.overflow = 'hidden';
+  document.querySelector('.cartDiv').style.overflowY = 'scroll';
+}
 
 const Header = () => {
-
-  const openCart = () => {
-    setTimeout(() => {
-      document.querySelector('.cart').style.transform =  'translate(-35vw)';
-      document.querySelector('.cartBg').style.transform = 'translate(100vw)';
-    }, 200);
-    document.body.style.overflow = 'hidden';
-  }
 
   return (
     <>
