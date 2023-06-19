@@ -3,6 +3,7 @@ import cart_svg from '../images/shopping-cart.svg';
 import { useEffect } from 'react';
 
 export const openCart = () => {
+  document.querySelector('.cartDiv').style.display = 'block';
   setTimeout(() => {
     document.querySelector('.cart').style.transform =  'translate(-35vw)';
     document.querySelector('.cartBg').style.transform = 'translate(100vw)';

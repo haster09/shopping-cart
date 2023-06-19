@@ -9,6 +9,7 @@ const Cart = ({items, add, remove, sum, checkout}) => {
     }, 200);
     document.body.style.overflow = 'scroll';
     document.querySelector('.cartDiv').style.overflowY = 'hidden';
+    document.querySelector('.cartDiv').style.display = 'none';
   }
 
   let i = 0;
