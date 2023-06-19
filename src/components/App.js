@@ -58,6 +58,7 @@ const App = () => {
 
   const checkout = () => {
     setCartItems([]);
+    setCount(0);
   }
 
 
