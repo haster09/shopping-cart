@@ -2,11 +2,10 @@ import CartItem from './CartItem';
 
 const Cart = ({items, add, remove, sum, checkout}) => {
 
-  const cartClose = () => {
+  const cartClose = async () => {
     setTimeout(() => {
       document.querySelector('.cart').style.transform =  'translate(35vw)';
       document.querySelector('.cartBg').style.transform = 'translate(-100vw)';
-      document.querySelector('.cartDiv').style.display = 'none';
     }, 200);
     document.body.style.overflow = 'scroll';
     document.querySelector('.cartDiv').style.overflowY = 'hidden';
